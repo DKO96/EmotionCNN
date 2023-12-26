@@ -41,6 +41,7 @@ class TestCNN:
       for data_, target_ in test_loader:
         data_ = data_.to(self.device)
         target_ = target_.to(self.device)
+        print(data_)
 
         outputs = self.model(data_)
         _, preds = torch.max(outputs, dim=1)
